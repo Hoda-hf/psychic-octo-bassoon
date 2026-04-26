@@ -1,0 +1,15 @@
+name: Greeting Manual workflow
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Please enter your name
+        required: true
+        type: string
+
+jobs:
+  greet-actor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello, ${{ github.event.inputs.name }} -- ${{ github.actor }}!"

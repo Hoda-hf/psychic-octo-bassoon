@@ -1,0 +1,14 @@
+name: Merge completed to Main workflow
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+    merge-completed:
+        runs-on: ubuntu-latest
+        steps:
+        - name: merge completed
+          run: echo "Changes merged to main."
